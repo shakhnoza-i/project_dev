@@ -13,7 +13,7 @@ export default {
 
 <style>
 body {
-  background: #fafafa;
+  background: #1b464d;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -21,6 +21,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   max-width: 600px;
   margin: 0 auto;
-  color: #555;
+  color: #424242;
 }
 </style>

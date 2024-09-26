@@ -4,6 +4,8 @@
       <input type="text" v-model="title" required>
       <label>Details</label>
       <textarea v-model="details" required></textarea>
+      <label>Image URL</label>
+      <input type="text" v-model="image" placeholder="Enter image URL" required>
       <button>Add Book</button>
     </form>
   </template>
@@ -13,7 +15,8 @@
     data() {
       return {
         title: '',
-        details: ''
+        details: '',
+        image: ''
       }
     },
     methods: {
@@ -21,6 +24,7 @@
       let book = {
         title: this.title,
         details: this.details,
+        image: this.image,
         favorite: false
       }
       console.log(book)

@@ -30,9 +30,9 @@
     .filter-bar button {
       background: none;
       border: none;
-      color: #bbb;
+      color: #ffffff;
       outline: none;
-      font-size: 12px;
+      font-size: 15px;
       text-transform: uppercase;
       margin-right: 10px;
       letter-spacing: 1px;
@@ -40,6 +40,6 @@
       cursor: pointer;
     }
     .filter-bar button.active {
-      color: #555;
+      color: #00ce89;
     }
   </style>

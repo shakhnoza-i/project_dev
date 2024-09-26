@@ -1,6 +1,7 @@
 <template>
     <div class="book" :class="{ favorite: book.favorite }">
       <div class="actions">
+        <img :src="book.image" alt="Book image" class="book-image" />
         <h3 @click="showDetails = !showDetails">{{ book.title }}</h3>
         <div class="icons">
         <span @click="deleteBook" class="material-icons">delete</span>
@@ -44,36 +45,44 @@
   };
   </script>
   
-  <style scoped>
-    .book {
-      margin: 20px auto;
-      background: rgb(255, 251, 210);
-      padding: 30px 30px;
-      border-radius: 4px;
-      box-shadow: 1px 2px 3px rgba(0,0,0,0.05);
-      border-left: 7px solid #e90074;
-    }
-    h3 {
-      cursor: pointer;
-    }
-    .actions {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+<style scoped>
+  .book {
+    margin: 20px auto;
+    background: rgb(255, 251, 210);
+    padding: 20px 30px;
+    border-radius: 4px;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.05);
+    border-left: 9px solid #e90074;
+  }
+  h3 {
+    cursor: pointer;
+  }
+  .actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  }
+  .actions:hover {
+    color: #04ca88;
   }
   .material-icons {
     font-size: 28px;
     margin-left: 10px;
-    color: #aca8a8;
+    color: #a5a2a2;
     cursor: pointer;
   }
   .material-icons:hover {
-    color: #3b3a3a;
+    color: #1b1b1b;
   }
   .book.favorite {
-    border-left: 7px solid #04ca88;
+    border-left: 9px solid #04ca88;
   }
   .book.favorite .grade {
     color: #07c988;
+  }
+  .book-image {
+  width: auto;
+  height: 150px;
+  margin-top: 10px;
   }
   </style>
