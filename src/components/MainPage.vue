@@ -47,8 +47,8 @@
   <style scoped>
     .book {
       margin: 20px auto;
-      background: rgb(235, 231, 183);
-      padding: 10px 20px;
+      background: rgb(255, 251, 210);
+      padding: 30px 30px;
       border-radius: 4px;
       box-shadow: 1px 2px 3px rgba(0,0,0,0.05);
       border-left: 7px solid #e90074;

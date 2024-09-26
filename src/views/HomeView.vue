@@ -1,7 +1,8 @@
 <template>
   <div class="home">
+    <FilterBar :current="current" @filterChange="current = $event" />
     <div v-if="books.length">
-      <div v-for="book in books" :key="book.id">
+      <div v-for="book in filteredBooks" :key="book.id">
         <MainPage :book="book" @delete="handleDelete" @favorite="handleFavorite" />
       </div>
     </div>
@@ -9,14 +10,16 @@
 </template>
 
 <script>
+import FilterBar from '../components/FilterBar.vue';
 import MainPage from '../components/MainPage.vue'
 
 export default {
   name: 'Home',
-  components: { MainPage },
+  components: { MainPage, FilterBar },
   data() {
     return {
-      books: []
+      books: [],
+      current: 'all',
     }
   },
   mounted() {
@@ -38,6 +41,17 @@ export default {
       p.favorite = !p.favorite
       // console.log(p)
     }
-  }
+  },
+  computed: {
+    filteredBooks() {
+      if (this.current === 'favorite') {
+        return this.books.filter(book => book.favorite)
+      }
+      if (this.current === 'non-favorite') {
+        return this.books.filter(book => !book.favorite)
+      }
+      return this.books
+    }
+  },
 }
 </script>
