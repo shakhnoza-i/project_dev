@@ -4,7 +4,9 @@
         <h3 @click="showDetails = !showDetails">{{ book.title }}</h3>
         <div class="icons">
         <span @click="deleteBook" class="material-icons">delete</span>
-        <span class="material-icons">edit</span>
+        <router-link :to="{ name: 'EditBook', params: { id: book.id }}">
+          <span class="material-icons">edit</span>
+        </router-link>
         <span @click="toggleFavorite" class="material-icons grade">grade</span>
       </div>
       </div>
