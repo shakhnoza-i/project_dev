@@ -10,10 +10,12 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Install json-server for json files
 ```
-npm run build
+npm install -g json-server
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Run this in another terminal 
+```
+json-server --watch data/db.json
+```
