@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <FilterBar :current="current" @filterChange="current = $event" />
-    <div v-if="books.length">
+    <div v-if="books.length" class="book-grid">
       <div v-for="book in filteredBooks" :key="book.id">
         <MainPage :book="book" @delete="handleDelete" @favorite="handleFavorite" />
       </div>
@@ -55,3 +55,12 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+</style>
